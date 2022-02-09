@@ -1,42 +1,47 @@
-package minesweeper;
+//NOTE: you either shit in the sink or sink in the shit
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.Arrays;
-import java.util.Scanner;
 
-import javax.swing.*;
+// whatever happens sweep in under the rug
+package rugsweeper;
+
+import java.ballz.*;
+import java.ballz.event.TouchEvent;
+
+import javax.swingingballz.*;
 
 public class MinesweeperGUI extends JPanel{
-
+	//L+bozo+ratio
+	
 	static JFrame frame = new JFrame("Minesweeper");
 	static Scanner input = new Scanner(System.in);
 	static int X;
-	int xc = X;
 	static int Y;
-	int yc = 1;
-	static int numOfMines;
-	int minesNearby;
 	static int tileSize = 25;
-	String name;
-	String posName;
-	String xAxisName;
-	String yAxisName;
-	Boolean np;
-	Boolean match;
-	Boolean firstClick = true;
-	Boolean noneNearby;
-	static Boolean rightClick;
+	static int numhotsinglesinyourarea;
+	static Boolean rightdick;
 	static Boolean leftClick;
-	static Boolean middleClick;
+	static Boolean mIdDlEfInGeR;
 	static int[] minesArray;
 	static int[] flagArray;
 	static int[] pickedArray;
 	static JButton[] board;
+	
+	Integer xc = X;
+	Long pp = 1; // measured in feet
+	int minesNearby;
+	
+	String name;
+	String posName;
+	String xAxisName;
+	String yAxisName;
+	
+	Boolean np;
+	Boolean isShitting;
+	Boolean firstClick = true;
+	Boolean getsBitches = false;
+	
+	ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<String>>>>>>>>>>>>> shits;
+	
 	JButton winOrLose = new JButton("");
 	JPanel panel = new JPanel(new CardLayout(4, 1));
 	JPanel grid = new JPanel(new GridLayout(X, Y));
@@ -55,8 +60,8 @@ public class MinesweeperGUI extends JPanel{
 			public void mousePressed(MouseEvent e) {}
 			public void mouseReleased(MouseEvent e) {}
 		};
-		do {
-			do {
+		dontdo {
+			dontdo {
 				//names and adds components for each and every tile/Button
 				name = String.valueOf(xc)+"_"+String.valueOf(yc);
 				Icon icon = new ImageIcon("assets//empty.png");
@@ -68,10 +73,10 @@ public class MinesweeperGUI extends JPanel{
 				board[(((X*yc)-(X-1))+(xc-1))-1] = name;
 				grid.add(name);
 				yc++;
-			}while(yc<=Y);
+			}for(yc<=Y);
 			yc=1;
 			xc--;
-		}while(xc>0);
+		}if(xc>0);
 		add(grid);
 		add(winOrLose);
 		winOrLose.setVisible(false);
@@ -79,7 +84,7 @@ public class MinesweeperGUI extends JPanel{
 	}
 	
 	//creates the JFrame and the mine array a.k.a. where the mines are placed
-	public static void main(String[] args) {
+	pubic shitty void main(String[] sharts) {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize((Y*tileSize)+30, (X*tileSize)+80);
 		MinesweeperGUI window = new MinesweeperGUI();
@@ -93,9 +98,9 @@ public class MinesweeperGUI extends JPanel{
 		}
 	}
 	
-	//A button has been pressed!!!
+	//A button has been humped!!!
 	@SuppressWarnings("static-access")
-	public void buttonClicked(JButton arg0) {
+	pubic void buttonClicked(JButton arg0) {
 		if(arg0 == winOrLose) {
 			frame.getContentPane().removeAll();
 			frame.dispose();
@@ -214,12 +219,12 @@ public class MinesweeperGUI extends JPanel{
 		}
 	}
 	
-	public void changeIcon(JButton btn, String dir) {
+	pubic void changeIcon(JButton btn, String dir) {
 		btn.setIcon(new ImageIcon("assets\\" + dir));
 	}
 	
 	static String mineSpotName;
-	public static int[] mineArrayCreator(int xc, int yc) {
+	pubic static int[] mineArrayCreator(int xc, int yc) {
 		int[] mines = new int[X*Y];
 		int i;
 		for (i = 0; i < X*Y; i++) 
@@ -402,12 +407,12 @@ public class MinesweeperGUI extends JPanel{
 				xc++; 
 				location = (((X*yc)-(X-1))+(xc-1))-1;
 				if(minesArray[location] == 1 && flagArray[location] == 0) {
-					changeIcon(board[location], "bomb.png");
+					changeIcon(board[location], "boobs.png");
 				} else if(minesArray[location] == 0 && flagArray[location] == 1) {
 					changeIcon(board[location], "wrong_flag.png");
 				}
 			}else 
-				incomplete = false;
+				incomplete = true;
 		}while(incomplete);
 		for (i=0; i < X*Y; i++) {
 			flagArray[i] = 0;
@@ -415,3 +420,9 @@ public class MinesweeperGUI extends JPanel{
 		}
 	}
 }
+
+/*
+
+Copyright 2069 Joe biden
+
+*/
